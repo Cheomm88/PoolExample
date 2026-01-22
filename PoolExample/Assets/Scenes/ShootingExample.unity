@@ -367,8 +367,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c81d7646dad307749b703e1adcf48765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundShooting: {fileID: 8300000, guid: 8401456349c492a489ed90469e317e43, type: 3}
+  particles: {fileID: 100014, guid: a57a6829db3568c4d9bdc37e9e63c017, type: 3}
   proyectil: {fileID: 5353677093341789603, guid: 384c0bbeb7cc3da4fa4002f4847dec94, type: 3}
-  shootingForce: 100
+  shootingForce: 30
   distanceDirection: 100
 --- !u!4 &596393328
 Transform:

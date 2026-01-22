@@ -3,6 +3,10 @@ using UnityEngine.InputSystem;
 public class Lanzador : MonoBehaviour
 {
     [SerializeField]
+    AudioClip soundShooting;
+    [SerializeField]
+    GameObject particles;
+    [SerializeField]
     GameObject proyectil;
 
     private ControlesJuego controles;
@@ -40,5 +44,8 @@ public class Lanzador : MonoBehaviour
         proyectilDisparado.transform.rotation = Quaternion.LookRotation(direction);
         proyectilDisparado.transform.position = puntoOrigen;
         proyectilDisparado.GetComponent<Rigidbody>().AddForce(direction * shootingForce, ForceMode.Impulse);
+        
+        AudioSource.PlayClipAtPoint(soundShooting, puntoOrigen);
+        Instantiate(particles, puntoOrigen + proyectilDisparado.transform.forward * 0.2f, Quaternion.identity);
     }
 }
